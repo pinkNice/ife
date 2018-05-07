@@ -1,0 +1,189 @@
+/*reset start*/
+
+html, body, p, pre, dl, dd, h1, h2, h3, h4, h5, h6, blockquote, ul, ol, menu {
+    margin: 0;
+}
+input, option {
+    padding: 0;
+}
+input, textarea {
+    box-shadow: none;
+    -webkit-appearance: none;
+}
+input {
+    border: 0;
+}
+ul, ol, menu {
+    padding-left: 0;
+    list-style: none;
+}
+ns, a:hover {
+    text-decoration: none;
+}
+a, ns {
+    cursor: pointer;
+}
+i, cite, dfn, em {
+    font-style: normal;
+}
+del {
+    text-decoration: line-through;
+}
+input, button, textarea, select, optgroup, option {
+    font-family: inherit;
+    font-size: inherit;
+    font-style: inherit;
+    font-weight: inherit;
+    outline: 0;
+}
+button {
+    -webkit-appearance: none;
+    border: 0;
+    background: none;
+}
+a {
+    -webkit-touch-callout: none;
+}
+:focus {
+    outline: 0;
+    -webkit-tap-highlight-color: transparent;
+}
+cite, em, i {
+    font-style: normal;
+}
+input[type="date"] {
+    text-align: right;
+}
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+    -webkit-appearance: none !important;
+    margin: 0;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+caption, th {
+    text-align: left;
+}
+fieldset, img {
+    border: 0;
+}
+body, html {
+    width: 100%;
+    height: 100% !important;
+    font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+    line-height: 1.5;
+    -webkit-user-select: none;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+    outline: 0;
+}
+.wrap {
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+}
+.main {
+    margin: 0 auto;
+    width: 1000px;
+}
+.float-l {
+    float: left;
+}
+.float-r {
+    float: right;
+}
+.f-clear:before, .f-clear:after {
+    clear: both;
+    content: '';
+    display: table;
+}
+.display-in {
+    display: inline;
+}
+.display-inb {
+    display: inline-block;
+}
+.display-b {
+    display: block;
+}
+.display-none {
+    display: none;
+}
+.ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+h1, .h1 {
+    font-size: 48px;
+}
+h2, .h2 {
+    font-size: 36px;
+}
+h3, .h3 {
+    font-size: 28px;
+}
+h4, .h4 {
+    font-size: 24px;
+}
+h5, .h5 {
+    font-size: 20px;
+}
+h6, .h6 {
+    font-size: 18px;
+}
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+    font-weight: normal;
+}
+.font-w6 {
+    font-weight: 600;
+}
+.text-center {
+    text-align: center;
+}
+/*reset end*/
+
+.resume {
+    box-sizing: border-box;
+}
+ .resume-header {
+    padding: 0 40px;
+    height: 100%;
+    color: #fff;
+    background: #65a4fa;
+ }
+.resume-header h1 {
+    margin-top: 40px;
+    font-size: 40px;
+}
+.resume-header,
+.resume-style2 section {
+    display: table-cell;
+    vertical-align: top;
+}
+.resume > section {
+    padding-left: 20px;
+}
+.resume-info .info-title {
+    height: 60px;
+    line-height: 60px;
+    font-size: 28px;
+}
+
+.resume-info .info-text + .info-text {
+    margin-left: 45px;
+}
+.resume-info .info-text strong {
+    padding-right: 10px;
+}
+
+.info-specail .info-text + .info-text {
+    margin-left: 0;
+}
+
+.info-specail .info-text + .info-text strong{
+    height: 42px;
+    line-height: 42px;
+}
+
