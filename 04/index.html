@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>“如果”可以“重来”</title>
+</head>
+<body>
+		<input id="first-number" type="number" value="0" placeholder="第一个数字">
+    <input id="second-number" type="number" value="0" placeholder="第二个数字">
+    <button id="add-btn">加</button>
+    <button id="minus-btn">减</button>
+    <button id="times-btn">乘</button>
+    <button id="divide-btn">除</button>
+    <p id="result">运算结果</p>
+</body>
+<script>
+	/**
+	 * DOM 元素集合
+	 * @type {[type]}
+	 */
+  var addEle = document.getElementById('add-btn'),
+    	minsEle = document.getElementById('minus-btn'),
+    	timesEle = document.getElementById('times-btn'),
+      divideEle = document.getElementById('divide-btn'),
+      firstEle = document.getElementById('first-number'),
+      secondEle = document.getElementById('second-number'),
+      resultEle = document.getElementById('result');
+  /**
+   * 加号按钮点击事件
+   * @return {[type]} [description]
+   */
+  addEle.onclick = function(){
+  	resultEle.innerHTML = firstEle.value * 1 + secondEle.value * 1;
+  }
+
+  /**
+   * 减号点击事件
+   * @return {[type]} [description]
+   */
+  minsEle.onclick = function(){
+  	resultEle.innerHTML = firstEle.value * 1 - secondEle.value * 1;
+  }
+
+  /**
+   * 乘号点击事件
+   * @return {[type]} [description]
+   */
+  timesEle.onclick = function(){
+  	resultEle.innerHTML = (firstEle.value * 1) * (secondEle.value * 1);
+  }
+
+  /**
+   * 除号点击事件
+   * @return {[type]} [description]
+   */
+  divideEle.onclick = function(){
+  	secondEle.value * 1 ? 
+  	resultEle.innerHTML = (firstEle.value * 1) / (secondEle.value * 1) : 
+  	alert('除数不能为0');
+  }
+  var a = 0;
+  for (var i = 1; i <=100; i++) {
+  	if(i%3){
+  		a = i;
+  	}else{
+  		a = 'PA';
+  	}
+  	console.log(a);
+  }
+
+  //九九乘法表
+	document.write("<table>");  
+	  
+	for (var x = 1; x <= 9; x++)  
+	{  
+	    document.write("<tr>");  
+	    for (var y = 1; y <= x; y++)  
+	    {  
+	        document.write("<th>"+y+"*"+x+"="+y*x+"</th>");  
+	    }  
+	    document.write("</tr>");  
+	}  
+	document.write("</table>");  
+
+	//时间段显示的问候语不一致
+	
+	var getHours = new Date().getHours(),
+			text;
+	switch(true){
+		case getHours < 9:
+			text = '早上好';
+			console.log(text);
+			break;
+		case getHours < 12:
+			text = '上午好';
+			break;
+		case getHours < 13:
+			text = '中午好';
+			break;
+		case getHours < 17:
+			text = '下午好';
+			break;
+		case getHours < 18:
+			text = '傍晚好';
+			break;
+		case getHours < 24:
+			text = '晚上好';
+			break;
+	}
+	document.write('<p>'+text+'</p>');
+
+
+</script>
+</html>
