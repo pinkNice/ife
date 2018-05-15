@@ -6,6 +6,7 @@
 </head>
 <body>
 	<div id="wrapper">
+	<h1>所有结果输出在控制台中</h1>
 		<div id="news-top" class="section">
 			 <h3>Some title</h3>
        <div class="content">
@@ -50,15 +51,17 @@
 	var findAllHtmlSpanInOneSection = function(){
 		spanItem = sectionItem.querySelectorAll('li');
 		console.log(spanItem);
+		return spanItem;
 
 	};
 	// 返回某个section下，class为active的链接中包含的文字内容
 	var getActiveLinkContent = function(){
 		var activeText = '';
 		activeText = sectionItem.querySelector('.active').innerHTML;
-		console.log(activeText)
+		console.log(activeText);
+		return activeText
 	};
-	
+
 	getAllListItem();
 	findAllHtmlSpanInOneSection();
 	getActiveLinkContent()
