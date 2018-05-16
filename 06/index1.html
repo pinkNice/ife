@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">    
+    <title>IFE ECMAScript</title>
+    <style>
+        select {
+            display: none;
+        }
+    </style>
+</head>
+<body>            
+    <input id="name" type="text">    
+    <button id="submit-btn"name="submitbtn">Submit</button>
+</body>
+<script>
+   var btnEle = document.querySelector('#submit-btn');
+   var inputEle = document.getElementById('name');
+
+   //点击事件
+   var submitFun = function(){
+        btnEle.onclick = function(e){
+            console.log(btnEle.name);
+        }
+   };
+
+   //监听键盘事件
+   var enterFun = function(){
+    var text = '';
+        inputEle.onkeyup = function(e){
+            e.keyCode == 27 
+                    ? inputEle.value = '' : text = e.keyCode == 13 
+                    ? btnEle.name : '';
+
+            console.log(text);
+        }   
+   }; 
+   submitFun();
+   enterFun();
+</script>
+</html>
