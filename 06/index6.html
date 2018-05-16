@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>无穷循环中的计时</title>
+</head>
+<body>
+	<form class="demo1">
+		<input type="button" name="" value="点击开始计时">
+		<input type="text" value="0" >
+	</form>
+	<form class="demo2">
+		<input type="button" value="30倒计时开始">
+		<input type="text" value="30">
+	</form>
+</body>
+<script>
+	var btnEle = document.querySelector('.demo1 input[type="button"]'),
+			inputTextEle = document.querySelector('.demo1 input[type="text"]'),
+			btnEle1 = document.querySelector('.demo2 input[type="button"]'),
+			inputTextEle1 = document.querySelector('.demo2 input[type="text"]');
+
+	var c = 0,
+			num = 30;
+	btnEle.onclick = function(){
+		btnTiemeOut();
+	};
+
+	//无限计时器
+	var btnTiemeOut = function(){
+		c = c + 1;
+		inputTextEle.value = c;
+		setTimeout(btnTiemeOut,1000)
+	}	
+
+	btnEle1.onclick = function(){
+		countDown();
+	}
+
+	//30倒计时
+	var countDown = function(){
+		num = num - 1;
+		inputTextEle1.value = num;
+		num ? setTimeout(countDown,1000)  : inputTextEle1.value = num = 30;
+	};
+</script>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>事件委托</title>
+</head>
+<body>
+	<div class="parent" data-id="44">
+		<div class="child" data-id="55">孩子</div>
+	</div>
+	<ul class="parentul">
+		<li>我还是个孩子</li>
+		<li>我还是个孩子</li>
+		<li>我还是个孩子</li>
+		<li>我还是个孩子</li>
+		<li>我还是个孩子</li>
+	</ul>
+</body>
+<script>
+	var parentEle = document.querySelector('.parent'),
+			childEle = document.querySelector('.child'),
+			parentulEle = document.querySelector('.parentul');
+	parentEle.onclick = function(){
+		console.log(this.getAttribute('data-id'));
+	};
+	childEle.onclick = function(){
+		console.log(this.getAttribute('data-id'));
+	};
+	parentulEle.onclick = function(e){
+		if(e.target.nodeName.toLowerCase() === 'li'){
+			console.log(e.target.innerHTML)
+		}		
+	};
+</script>
+</html>
