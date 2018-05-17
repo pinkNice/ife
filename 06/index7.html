@@ -8,51 +8,49 @@
 <button id="fade-btn">淡出</button>
 </body>
 <script>
+
 	var btnEle = document.querySelector('#fade-btn'),
 			objEle = document.querySelector('#fade-obj'),
-			num = 10;
-	var flag = true,
+			num = 10,
+			//淡入淡出开关
+			flag = true,
+			fadeText = '',
 			insetIn,
 			outsetIn;
+
 	btnEle.onclick = function(){
-			if(num > 0){
-				fadeOut();
-			}else{
-				fadeIn()
-			}
+		fadeCommon();
 	};
 
-	var fadeOut = function(){
-		outsetIn = setInterval(function(){
-			btnEle.disabled = true;
-			btnEle.innerHTML = '淡入';
-			num--;
-			objEle.style.opacity = num / 10;
-
-			if(num > 0){
-				btnEle.innerHTML = '淡出';
-			}else{
-				console.log(num)
-				btnEle.disabled = false;
-				clearInterval(outsetIn);		
-			}
-		},300);
-	};
-
-	var fadeIn = function(){
+	/**
+	 * [fadeCommon function]
+	 * 淡入淡出的方法
+	 */
+	var fadeCommon = function(){
 		insetIn = setInterval(function(){
 			btnEle.disabled = true;
-			if(num <= 10){
-				num++;
-				objEle.style.opacity = num / 10;
-			}else{
-				btnEle.disabled = false;
-				clearInterval(insetIn);
-				btnEle.innerHTML = '淡出';
-			}
-		},300);
-	};
 
-	
+			if(flag){
+				num--;
+			}else{
+				num++;
+			}
+			
+			objEle.style.opacity = num / 10;
+
+			if(num <= 0 || num >= 10){
+				clearInterval(insetIn);
+				btnEle.disabled = false;
+
+				if(num){
+					fadeText = (flag = true)? '淡出' : '淡入';
+					btnEle.innerHTML = fadeText;
+				}else{
+					fadeText = (flag = false) ? '淡出' : '淡入';
+					btnEle.innerHTML = fadeText;	
+				}
+			}
+		},30)
+	};
 </script>
 </html>
