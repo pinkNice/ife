@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>笑脸动画</title>
+</head>
+<style type="text/css">
+	.smileImg {
+		width: 480px;
+		height: 480px;
+		background: url('./smile.jpg') no-repeat center;
+	}
+</style>
+<body>
+	<div class="smileImg"></div>
+</body>
+<script type="text/javascript">
+	var smileImgEle = document.querySelector('.smileImg'),
+			maxNum = 7680,
+			num = 0,
+			setIntervalActor;
+
+	var imgActor = function(){
+		setIntervalActor = setInterval(function(){
+			smileImgEle.style.backgroundPositionY = -num + 'px';
+			num = num + 480;
+			
+			if(num == maxNum){
+				clearInterval(setIntervalActor);
+				smileImgEle.style.backgroundPositionY = num = 0;
+				imgActor();
+			}
+		},80);
+	};
+
+	imgActor();
+</script>
+</html>
