@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>在JavaScript中值类型和引用类型的区别</title>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+	//引用类型
+	var person = new Object();
+	person.name = 'jack';
+	person.age = 20;
+	document.write('姓名：'+person.name + ' is 年龄：' + person.age);
+
+	//值类型
+	var person1 = '';
+	person1.name = 'jack';
+	person1.age = 20;
+
+	document.write('<p>姓名：'+person1.name +' is 年龄：'+person1.age+'</p>');
+
+	var num = 10;
+	var num2 = num;
+	console.log(num);
+	num = 100;
+	console.log(num);
+	console.log(num2);
+
+	var person2 = new Object();
+	person2.age = 18;
+	console.log(person2.age)
+	var person3 = person2;
+	console.log(person3.age);
+	person3.age = 30;
+	console.log(person2.age);
+	person2.age = 10;
+	console.log(person3.age)
+
+</script>
+</html>
