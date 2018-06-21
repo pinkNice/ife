@@ -59,4 +59,3 @@ var text=''
  for(i in person5){
  	text += person5[i]; 
  }
- console.log(text)
