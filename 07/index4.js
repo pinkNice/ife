@@ -26,13 +26,13 @@ function diyTrim(str) {
 
 // 测试用例
 console.log(diyTrim(' a f b    ')); // ->a f b
-console.log(diyTrim('    ffdaf    ')); // ->ffdaf
-console.log(diyTrim('1    ')); // ->1
-console.log(diyTrim('　　f')); // ->f
-console.log(diyTrim('  　  a f b 　　 ')); // ->a f b
-console.log(diyTrim(' ')); // ->
-console.log(diyTrim('　')); // ->
-console.log(diyTrim('')); // ->
+// console.log(diyTrim('    ff   daf    ')); // ->ffdaf
+// console.log(diyTrim('1    ')); // ->1
+// console.log(diyTrim('　　f')); // ->f
+// console.log(diyTrim('  　  a f b 　　 ')); // ->a f b
+// console.log(diyTrim(' ')); // ->
+// console.log(diyTrim('　')); // ->
+// console.log(diyTrim('')); // ->
 
 /*
  去掉字符串str中，连续重复的地方
