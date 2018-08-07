@@ -2,7 +2,7 @@ let defaults = {
 	theadData: ['商品','地区',
 	'1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月'],
 	selectVaule1: '',
-	selectVaule1: '',
+	selectVaule2: '',
 	dom: {
 		select1: document.querySelector('.select-1'),
 		select2: document.querySelector('.select-2'),
@@ -51,7 +51,7 @@ changeData = function(){
 			let secndData = [];
 
 	newData = [];
-	sourceData.map(item => {
+	sourceData.map((item => {
 		if(item.region === selectVaule1){
 			newData.push(item)
 		}else if(selectVaule1 ==='全部'){
@@ -66,7 +66,6 @@ changeData = function(){
 			}
 		});
 	newData = secndData || newData;
-	console.log(newData);
 	tbody.innerHTML = '';
 	renderTableDom()
 };
